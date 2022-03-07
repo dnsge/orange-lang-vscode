@@ -1,0 +1,39 @@
+{
+    "name": "orange-lang",
+    "displayName": "Orange Language",
+    "description": "Syntax highlighting for github.com/dnsge/orange assembly language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.65.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "orangeasm",
+            "aliases": ["Orange Assembly", "orangeasm"],
+            "extensions": [".orange"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "orangeasm",
+            "scopeName": "source.orange",
+            "path": "./syntaxes/orangeasm.tmLanguage.json"
+        }],
+        "semanticTokenScopes": [{
+            "language": "orangeasm",
+            "scopes": {
+                "function": ["entity.directive.orangeasm"]
+            }
+        }]
+    },
+    "repository": {
+        "url": "https://github.com/dnsge/orange-lang-vscode"
+    },
+    "author": {
+        "name": "Daniel Sage",
+        "url": "https://github.com/dnsge"
+    },
+    "license": "MIT"
+}
